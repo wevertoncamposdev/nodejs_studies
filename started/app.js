@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 app.get('/products', (req, res) => {
 
     const data = JSON.parse(fs.readFileSync('./data.json'));
-
+    
     if(req.query.id){
         res.json(findById(req.query.id, data));
     }else{
