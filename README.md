@@ -2,7 +2,7 @@
 # Nodejs
 
 [Microsoft Learn](https://learn.microsoft.com/pt-br/training/paths/build-javascript-applications-nodejs/)
-(
+
 [NodeJS Learn](https://nodejs.dev/pt/learn/)
 
 
