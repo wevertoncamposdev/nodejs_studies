@@ -125,5 +125,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# ignore frameworks 
 framework/start_nestjs/
 microsoft/node-essentials/
