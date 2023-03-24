@@ -1,6 +1,13 @@
 
-## Nova conversa sobre: Nodejs
- Thu Mar 23 2023 20:09:16 GMT-0300 (Horário Padrão de Brasília)
+# Nodejs
+
+[Microsoft Learn](https://learn.microsoft.com/pt-br/training/paths/build-javascript-applications-nodejs/)
+(
+[NodeJS Learn](https://nodejs.dev/pt/learn/)
+
+
+Thu Mar 23 2023 20:09:16 GMT-0300 (Horário Padrão de Brasília)
+Conversa com chatGPT:
 
 **Pergunta:** O que é o NodeJS? 
 
