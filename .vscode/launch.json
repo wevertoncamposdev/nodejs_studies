@@ -5,14 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Node",
+            "program": "${workspaceFolder}/filesystem/app.js",
+            "request": "launch",
+            "runtimeArgs": [
+                "--no-warnings"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+
+        {
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}/testes/script.js"
         },
-      
-
         {
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
@@ -26,14 +37,6 @@
             ],
             "type": "node"
         },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Node",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\tests\\scripts.js"
-        },
+
     ]
 }
