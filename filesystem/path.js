@@ -5,6 +5,7 @@ const path = require('path');
 /* Create diretory */
 //fs.mkdir(path.join(__dirname, 'stores', '203', 'sales'), {recursive: true});
 
+
 /* Write file */
 async function lerArquivo() {
   const data = JSON.parse(await fs.promises.readFile(__dirname + "\\stores\\201\\sales.json"));

@@ -15,11 +15,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/products', (req, res) => {
-
     const dataPath = path.join(__dirname, 'data.json');
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
     const keys = Object.keys(req.query);
-
     if (keys[0]) {
         res.json(findBy(keys[0], req.query[keys[0]], data));
     } else {
