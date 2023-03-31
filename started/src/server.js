@@ -1,30 +1,14 @@
 const express = require('express');
-const path = require('path');
-const fs = require('fs');
-
+const router = require('./routes/routes')(express);
+const sequelize = require('./database/database');
 const app = express();
 const port = 3000;
 
-function findBy(prop, value, data) {
-    const result = data.results.find(obj => obj[prop] == value);
-    return result ? result : 'Not Found!';
-}
+//definir rotas
+app.use(router);
 
-app.get('/', (req, res) => {
-    res.send('Retorne outra coisa!');
-});
-
-app.get('/products', (req, res) => {
-    const dataPath = path.join(__dirname, 'data.json');
-    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    const keys = Object.keys(req.query);
-    if (keys[0]) {
-        res.json(findBy(keys[0], req.query[keys[0]], data));
-    } else {
-        res.json(data.results);
-    }
-});
-
-app.listen(port, () => {
-    console.log('Server in runnig');
+sequelize.sync().then(() => {
+    app.listen(port, () => {
+        console.log('Server in runnig');
+    });
 });
