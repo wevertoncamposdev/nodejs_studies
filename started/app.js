@@ -11,7 +11,7 @@ function findBy(prop, value, data) {
 }
 
 app.get('/', (req, res) => {
-    res.send('Server in runnig!');
+    res.send('Retorne outra coisa!');
 });
 
 app.get('/products', (req, res) => {

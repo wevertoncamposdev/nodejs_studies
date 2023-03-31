@@ -2,11 +2,12 @@
     // Use o IntelliSense para saber mais sobre os atributos possíveis.
     // Focalizar para exibir as descrições dos atributos existentes.
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    //"${workspaceFolder}\\microsoft\\node-essentials\\nodejs-files\\index.js",
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Node",
-            "program": "${workspaceFolder}/filesystem/app.js",
+            "program": "${workspaceFolder}\\filesystem\\path.js",
             "request": "launch",
             "runtimeArgs": [
                 "--no-warnings"
@@ -15,14 +16,6 @@
                 "<node_internals>/**"
             ],
             "type": "node"
-        },
-
-        {
-            "name": "Launch Chrome",
-            "request": "launch",
-            "type": "chrome",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}/testes/script.js"
         },
         {
             "console": "integratedTerminal",
@@ -37,6 +30,7 @@
             ],
             "type": "node"
         },
+
 
     ]
 }

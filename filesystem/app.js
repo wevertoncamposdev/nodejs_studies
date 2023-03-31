@@ -1,20 +1,15 @@
 
 const File = require('./File');
-
 const file = new File();
 
-file.readContent('stores')
-.then(result => console.log(result))
-.catch(error => console.error(error));
+main();
 
-file.readFile('stores/201/201.json')
-.then(result => console.log(result))
-.catch(error => console.error(error));
+function main() {
+    const content = readContent();
+    console.log(content);
+}
 
-file.typeContent('stores')
-.then(result => console.log(result))
-.catch(error => console.error(error));
-
-file.findContent('stores')
-.then(result => console.log(result))
-.catch(error => console.error(error));
+async function readContent() {
+    const result = await file.readContent('stores')
+        .then(resolve => { setTimeout(() => { const result = result }, '1000'); });
+}
